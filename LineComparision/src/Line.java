@@ -19,4 +19,8 @@ public class Line {
         return this.x1 == obj.x1 && this.y1 == obj.y1 && this.x2 == obj.x2 && this.y2 == obj.y2;
     }
 
+    public int compareTo(Line otherLine) {
+
+        return Double.compare(this.length, otherLine.length);
+    }
 }

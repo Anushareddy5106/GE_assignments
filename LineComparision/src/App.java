@@ -23,7 +23,7 @@ public class App {
         System.out.println("For line 1:");
         Line line1 = getLine();
 
-        System.out.println("Length of line 1: " + line1.length
+        System.out.println("Length of line 1: " + line1.length);
 
         Line line2 = getLine();
 
@@ -38,8 +38,13 @@ public class App {
         } else {
             System.out.println("Lines are not equal");
         }
-        
 
-      
+        int lineCompare = line1.compareTo(line2);
+
+        String temp = lineCompare == 0 ? "Both lines are of equal length"
+                : lineCompare > 0 ? "Line 1 is greater than line 2" : "Line 1 is smaller than line 2";
+
+        System.out.println(temp);
+
     }
 }
