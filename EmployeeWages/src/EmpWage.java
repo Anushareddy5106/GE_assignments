@@ -12,12 +12,12 @@ public class EmpWage {
         if (isPresent() == true) {
             switch (isFullTime) {
                 case 1:
-                    System.out.println("Employee is fulltime");
+                    // System.out.println("Employee is fulltime");
                     empHour = 8;
                     break;
 
                 default:
-                    System.out.println("Employee is parttime");
+                    // System.out.println("Employee is parttime");
                     empHour = 4;
                     break;
             }
@@ -53,6 +53,7 @@ public class EmpWage {
         }
         System.out.println("Monthly Wage is:" + monthlyWage);
 
+        // UC6
         int days = 0;
         int totalEmpHour = 0;
         int monthlyWageUC6 = 0;
@@ -62,8 +63,7 @@ public class EmpWage {
             days++;
         }
 
-        System.out.println("Monthly Wage for UC6 is:" + monthlyWageUC6 );
-
+        System.out.println("Monthly Wage for UC6 is:" + monthlyWageUC6);
 
     }
 }
