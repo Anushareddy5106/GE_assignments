@@ -11,4 +11,12 @@ public class Line {
         this.length = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
     }
 
+    public boolean equals(Line obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        return this.x1 == obj.x1 && this.y1 == obj.y1 && this.x2 == obj.x2 && this.y2 == obj.y2;
+    }
+
 }

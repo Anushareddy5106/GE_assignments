@@ -20,10 +20,25 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome to line comparision computation");
 
-        System.out.println("For line :");
-        Line line = getLine();
+        System.out.println("For line 1:");
+        Line line1 = getLine();
 
-        System.out.println("Length of line : " + line.length);
+        System.out.println("Length of line 1: " + line1.length
+
+        Line line2 = getLine();
+
+        System.out.println("Length of line 2: " + line2.length);
+
+        scanner.close();
+
+        boolean lineEqual = line1.equals(line2);
+
+        if (lineEqual) {
+            System.out.println("Both lines are equal");
+        } else {
+            System.out.println("Lines are not equal");
+        }
+        
 
       
     }
