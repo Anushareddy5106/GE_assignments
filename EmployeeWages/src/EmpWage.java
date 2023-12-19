@@ -53,6 +53,17 @@ public class EmpWage {
         }
         System.out.println("Monthly Wage is:" + monthlyWage);
 
+        int days = 0;
+        int totalEmpHour = 0;
+        int monthlyWageUC6 = 0;
+        while (days <= 20 && totalEmpHour <= 100) {
+            monthlyWageUC6 += WAGE_PER_HOUR * hoursPerDay();
+            totalEmpHour += hoursPerDay();
+            days++;
+        }
+
+        System.out.println("Monthly Wage for UC6 is:" + monthlyWageUC6 );
+
 
     }
 }
