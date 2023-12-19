@@ -7,20 +7,32 @@ public class EmpWage {
 
         if (empCheck == 1)
             System.out.println("Employee is Present");
-        else
+        else{
             System.out.println("Employee is Absent");
+            return;
+        }
 
-        // UC2
+        // UC2 && UC3
         int WAGE_PER_HOUR = 20;
 
         int empWage = 0;
         int empHour = 0;
-
+        int isFullTime = Math.random() < 0.5 ? 0 : 1;
         if (empCheck == 1) {
-            empHour = 8;
+           if (isFullTime == 0) {
+                System.out.println("Part Time Employee");
+                empHour = 4;
+            }
+            else{
+                System.out.println("Full Time Employee");
+                empHour = 8;
+            }
+            
         }
+
         empWage = empHour * WAGE_PER_HOUR;
         System.out.println("Emp Wage: " + empWage);
+
 
     }
 }
