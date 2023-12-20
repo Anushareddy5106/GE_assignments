@@ -12,7 +12,7 @@ public class App {
         int x2 = scanner.nextInt();
         int y2 = scanner.nextInt();
 
-        Line line = new Line(x1, y1, x2, y2);
+        Line line = new Line(new Point(x1, y1), new Point(x2, y2));
 
         return line;
     }
@@ -25,6 +25,7 @@ public class App {
 
         System.out.println("Length of line 1: " + line1.length);
 
+        System.out.println("For line 2:");
         Line line2 = getLine();
 
         System.out.println("Length of line 2: " + line2.length);

@@ -1,14 +1,15 @@
+//UC7
 public class Line {
-    private int x1, y1, x2, y2;
+    private Point point1;
+    private Point point2;
     public double length;
 
-    Line(int x1, int y1, int x2, int y2) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
+    Line(Point point1, Point point2) {
+        this.point1 = point1;
+        this.point2 = point2;
 
-        this.length = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+        this.length = Math
+                .sqrt((point1.x - point2.x) * (point1.x - point2.x) + (point1.y - point2.y) * (point1.y - point2.y));
     }
 
     public boolean equals(Line obj) {
@@ -16,7 +17,7 @@ public class Line {
             return true;
         }
 
-        return this.x1 == obj.x1 && this.y1 == obj.y1 && this.x2 == obj.x2 && this.y2 == obj.y2;
+        return this.point1.equals(obj.point1) && this.point2.equals(obj.point2);
     }
 
     public int compareTo(Line otherLine) {
