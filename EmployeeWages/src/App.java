@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class App {
     static Scanner scanner = new Scanner(System.in);
@@ -8,7 +7,9 @@ public class App {
         System.out.println("Welcome to employee wage builder");
 
         // UC7;
-        ArrayList<Company> companyList = new ArrayList<>();
+        // ArrayList<CompanyEmpWage> companyList = new ArrayList<>();
+
+        EmpWageBuilder empWageBuilder = new EmpWageBuilder();
 
         int option;
 
@@ -16,6 +17,7 @@ public class App {
             System.out.println("--------------------------");
             System.out.println("Enter 1 to display companyList");
             System.out.println("Enter 2 Add company");
+            System.out.println("Enter 3 to get Total Wage of Company");
             System.out.println("Enter 0 to end");
             System.out.println("--------------------------");
 
@@ -23,16 +25,15 @@ public class App {
 
             switch (option) {
                 case 1:
-                    if (companyList.size() == 0)
-                        System.out.println("CompanyList is empty");
-                    for (int i = 0; i < companyList.size(); i++) {
-                        System.out.println("---- company " + (i + 1) + " : -----");
-                        companyList.get(i).displayCompanyDetails();
-                    }
+                    empWageBuilder.display();
                     break;
                 case 2:
-                    Company company = new Company();
-                    companyList.add(company);
+                    empWageBuilder.addCompanyEmpWage();
+                    break;
+                case 3:
+                    System.out.println("Enter the Company Name: ");
+                    String company = scanner.next();
+                    System.out.println("Total Employee Wage: " + empWageBuilder.getTotalWage(company));
                     break;
                 default:
                     System.out.println("Enter a valid number");

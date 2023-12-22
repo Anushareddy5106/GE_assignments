@@ -1,28 +1,36 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Company {
+//UC 10
+
+public class CompanyEmpWage {
     static Scanner scanner = new Scanner(System.in);
 
     public String companyName;
-    public Employee employee;
+    // public Employee employee;
     public int wagePerHour;
     public int workingDaysPerMonth;
     public int workingHoursPerMonth;
 
-    public Company() {
+    // UC 9
+    public int totalEmpWage;
+    public ArrayList<Integer> dailyWageList;
+
+    public CompanyEmpWage() {
         this(getStringInp(),
                 getIntInp("Enter the wage per hour: "),
                 getIntInp("Enter the working days per month: "),
                 getIntInp("Enter the working hours per month: "));
     }
 
-    public Company(String name, int wage, int workingDays, int workingHours) {
-        this.employee = new Employee();
+    public CompanyEmpWage(String name, int wage, int workingDays, int workingHours) {
+        // this.employee = new Employee();
         this.companyName = name;
         this.wagePerHour = wage;
         this.workingDaysPerMonth = workingDays;
         this.workingHoursPerMonth = workingHours;
+        this.totalEmpWage = 0;
+        this.dailyWageList = new ArrayList<>();
     }
 
     public static String getStringInp() {
@@ -40,14 +48,8 @@ public class Company {
         System.out.println("Wage Per Hour: " + wagePerHour);
         System.out.println("Working Days Per Month: " + workingDaysPerMonth);
         System.out.println("Working Hours Per Month: " + workingHoursPerMonth);
+        System.out.println("Total Employee Wage: " + totalEmpWage);
+        System.out.println("Daily Wage List: " + dailyWageList.toString());
     }
 
-    public void companyDailyWage() {
-        System.out.println("Daily Wage of Employee : " + employee.dailyWage(wagePerHour));
-    }
-
-    public void companyMonthlyWage() {
-        System.out.println("Monthly Wage of Employee : "
-                + employee.monthlyWage(wagePerHour, workingDaysPerMonth, workingHoursPerMonth));
-    }
 }
